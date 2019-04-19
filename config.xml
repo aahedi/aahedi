@@ -38,7 +38,6 @@
 <plugin name="cordova-plugin-media-capture" spec="3.0.2"/>
 <plugin name="cordova-plugin-screenrecord"/>
 <plugin name="cordova-plugin-background-mode"/>
-<plugin name="cordova-plugin-kiosk-launcher"/>
 <plugin name="cordova-plugin-app-launcher"/>
 <plugin name="cordova-plugin-android-permissions"/>
 <plugin name="cordova-plugin-insomnia" spec="https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git"/>
