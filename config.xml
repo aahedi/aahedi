@@ -43,7 +43,8 @@
 <plugin name="cordova-plugin-fullscreen" spec="https://github.com/mesmotronic/cordova-plugin-fullscreen.git"/>
 <plugin name="cordova-plugin-file-opener2" spec="https://github.com/pwlin/cordova-plugin-file-opener2.git"/>
 <plugin name="cordova-plugin-media-capture" spec="3.0.2"/>
-<plugin name="cordova-plugin-screenrecord"/>
+<!--<plugin name="cordova-plugin-screenrecord"/>-->
+<plugin name="cordova-plugin-screenrecord" spec="https://github.com/aahedi/cordova-plugin-screenrecord.git"/>
 <plugin name="cordova-plugin-app-launcher"/>
 <plugin name="cordova-plugin-background-mode"/>
 <plugin name="cordova-plugin-android-permissions"/>
