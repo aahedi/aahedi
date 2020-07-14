@@ -23,13 +23,17 @@
 <preference name="AndroidPersistentFileLocation" value="Compatibility" />
 <plugin name="cordova-android-support-gradle-release"/>
 <plugin name="cordova-plugin-enable-multidex"/>
+<plugin name="cordova-plugin-globalization"/>
+<plugin name="cordova-plugin-app-version"/>
+<plugin name="cordova-plugin-sim"/>
+<plugin name="cordova-plugin-contacts"/>
 <plugin name="cordova-plugin-statusbar"/>
 <plugin name="cordova-plugin-navigationbar"/>
 <plugin name="cordova-plugin-shake"/>
 <plugin name="cordova-plugin-video-thumbnail"/>
 <plugin name="cordova-plugin-device" spec="2.0.2"/>
-<plugin name="cordova-plugin-compat" spec="1.2.0"/>
 <plugin name="cordova-plugin-file" spec="6.0.1"/>
+<plugin name="cordova-plugin-filepath"/>
 <plugin name="cordova-plugin-file-transfer" spec="1.7.1"/>
 <plugin name="cordova-plugin-inappbrowser" spec="3.0.0"/>
 <plugin name="cordova-plugin-dialogs" spec="2.0.1"/>
@@ -37,23 +41,59 @@
 <plugin name="cordova-plugin-camera-preview"/>
 <plugin name="cordova-plugin-whitelist" spec="1.3.3"/>
 <plugin name="cordova-plugin-x-socialsharing" spec="5.4.3"/>
-<plugin name="cordova-plugin-geolocation" spec="4.0.1"/>
+<plugin name="cordova-plugin-geolocation"/>
+<plugin name="cordova-plugin-advanced-geolocation"/>
 <plugin name="cordova-plugin-mediascanner"/>
 <plugin name="cordova-plugin-gallery-refresh"/>
+<plugin name="cordova-plugin-android-volume"/>
+<!--<plugin name="cordova-plugin-admob-free"> 
+<variable name="ADMOB_APP_ID" value="ca-app-pub-5534349488129893~5975183237" /> 
+</plugin>
+<plugin name="cordova-plugin-admob-mediation-facebook"/>
+<plugin name="cordova-admob-sdk" spec="../plugins/cordova-admob-sdk">
+    <variable name="PLAY_SERVICES_VERSION" value="11.0.4" />
+</plugin>-->
+<plugin name="SpeechSynthesisPlugin" spec="https://github.com/macdonst/SpeechSynthesisPlugin.git"/>
+<!--<plugin name="cordova-plugin-tts"/>
+<plugin name="cordova-plugin-tts-notification" spec="https://github.com/kn4rfy/cordova-plugin-tts-notification.git"/>-->
+<plugin name="cordova-plugin-notification-listener" spec="https://github.com/SmallTsai/cordova-plugin-notification-listener.git"/>
+<plugin name="cordova-sharingreceptor" spec="https://github.com/stample/cordova-sharingreceptor.git"/>
+<plugin name="cordova-plugin-intent" spec="https://github.com/napolitano/cordova-plugin-intent"/>
+<plugin name="com.virtuoworks.cordova-plugin-canvascamera" spec="https://github.com/VirtuoWorks/CanvasCameraPlugin.git"/>
 <plugin name="cordova-plugin-fullscreen" spec="https://github.com/mesmotronic/cordova-plugin-fullscreen.git"/>
 <plugin name="cordova-plugin-file-opener2" spec="https://github.com/pwlin/cordova-plugin-file-opener2.git"/>
+<!--<plugin name="cordova-plugin-image-resizer" spec="https://github.com/protonet/cordova-plugin-image-resizer.git"/>-->
 <plugin name="cordova-plugin-media-capture" spec="3.0.2"/>
 <plugin name="cordova-clipboard"/>
 <plugin name="cordova-plugin-audio-mode"/>
-<!--<plugin name="cordova-plugin-screenrecord"/>-->
+<!--<plugin name="cordova-plugin-purchase"/>-->
+<plugin name="cordova-plugin-network-information"/>
+<!--<plugin name="cordova-plugin-screenrecord"/>
+<plugin name="cordova-plugin-gif" spec="https://github.com/aahedi/cordova-plugin-gif.git"/>
+<plugin name="cordova-plugin-audio-join" spec="https://github.com/aahedi/cordova-plugin-audio-join.git"/>
+<plugin name="cordova-plugin-nocsonicmedia" spec="https://github.com/aahedi/cordova-plugin-nocsonicmedia.git"/>-->
+<plugin name="cordova-plugin-watermark-video"/>
+<plugin name="cordova-plugin-media-custom"/>
+<plugin name="cordova-plugin-dbmeter"/>
 <plugin name="cordova-plugin-screenrecord" spec="https://github.com/aahedi/cordova-plugin-screenrecord.git"/>
 <plugin name="cordova-plugin-video-editor" spec="https://github.com/jbavari/cordova-plugin-video-editor.git"/>
 <plugin name="cordova-plugin-screen-orientation"/>
 <plugin name="cordova-plugin-app-launcher"/>
+<plugin name="cordova-plugin-dnd" spec="https://github.com/martinchuka/cordova-plugin-dnd.git"/>
+<!--<plugin name="cordova-plugin-ocr-time-from-camera" spec="https://github.com/thecodealer/cordova-plugin-ocr-time-from-camera.git"/>-->
 <plugin name="cordova-plugin-background-mode"/>
 <plugin name="cordova-plugin-android-permissions"/>
+ <!--Required for Push Notification tutorial dari youtube -->
+<!--<plugin name="cordova-plugin-firebasex" spec="https://github.com/dpa99c/cordova-plugin-firebasex"/>
+<plugin name="cordova-plugin-androidx"/>
+<plugin name="cordova-plugin-androidx-adapter"/>-->
+<plugin name="cordova-plugin-customurlscheme" source="npm">
+  <param name="URL_SCHEME" value="aahedi" />
+</plugin>
+<plugin name="onesignal-cordova-plugin"/>
 <plugin name="cordova-plugin-insomnia" spec="https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git"/>
 <plugin name="cordova-diagnostic-plugin" spec="https://github.com/dpa99c/cordova-diagnostic-plugin.git"/>
+<plugin name="cordova-plugin-local-notification"/>
 <platform  name="ios">
     <!-- below requires the splash screen plugin -->
     <!-- docs: https://github.com/apache/cordova-plugin-splashscreen -->
@@ -65,14 +105,13 @@
     <!-- below requires the status bar plugin -->
     <!-- docs: https://github.com/apache/cordova-plugin-statusbar -->
     <!-- see http://devgirl.org/2014/07/31/phonegap-developers-guid -->
-    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <preference name="StatusBarOverlaysWebView" value="true"/>
     <preference name="StatusBarBackgroundColor" value="transparent"/>
     <preference name="StatusBarStyle" value="lightcontent"/>
 </platform>
-<platform  name="android">
-    <!-- below requires the splash screen plugin -->
-    <!-- docs: https://github.com/apache/cordova-plugin-splashscreen -->
-    <preference name="SplashMaintainAspectRatio" value="false"/>
+<platform name="android">
+<preference name="AndroidLaunchMode" value="singleTask"/>
+<preference name="SplashMaintainAspectRatio" value="false"/>
 </platform>
 <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect --ignore-gpu-blacklist "/>
 <platform name="android" >
@@ -91,4 +130,11 @@
 <config-file platform="android" parent="/manifest/application" mode="merge"> 
     <activity android:launchMode="singleTop" />
 </config-file>
+<edit-config file="AndroidManifest.xml" target="/manifest/uses-sdk" mode="merge">
+<intent-filter>
+    <action android:name="android.intent.action.SEND" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <data android:mimeType="*/*" />
+</intent-filter>
+</edit-config>
 </widget>
